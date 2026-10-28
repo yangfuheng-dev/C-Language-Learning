@@ -1,37 +1,34 @@
+/**
+ * @file alphabet_pyramid.c
+ * @brief 打印字母金字塔（练习嵌套循环与边界控制）
+ * @author yangfuheng-dev
+ */
+
 #include <stdio.h>
-#include <math.h>
+
+void move(int num) {
+    for (int i = 1; i <= num; i++) {
+        
+        // 【避坑点】：空格数必须是递减的 (num - i)，千万别写成常数，否则会左对齐！
+        for (int j = 1; j <= num - i; j++) {
+            printf(" ");
+        }
+        
+        for (int j = 1; j <= i; j++) {
+            printf("%c", 'A' + j - 1);
+        }
+        
+        for (int j = i - 1; j >= 1; j--) {
+            printf("%c", 'A' + j - 1);
+        }
+        
+        printf("\n"); 
+    }
+}
 
 int main() {
-    int n, i;
-    double x[10], y[10], sum = 0.0;
-
+    int n;
     scanf("%d", &n);
-
-    if (n == 1) {
-        double x1, y1;
-        scanf("%lf %lf", &x1, &y1);
-        printf("0.00\n");
-    }
-    else if (n == 2) {
-        double x1, y1, x2, y2;
-        scanf("%lf %lf", &x1, &y1);
-        scanf("%lf %lf", &x2, &y2);
-        sum = sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
-        printf("%.2lf\n", sum);
-    }
-    else if (n > 2) {
-        for (i = 0; i < n; i++) {
-            scanf("%lf %lf", &x[i], &y[i]);
-        }
-
-        for (i = 0; i < n - 1; i++) {
-            sum += sqrt((x[i + 1] - x[i]) * (x[i + 1] - x[i]) + (y[i + 1] - y[i]) * (y[i + 1] - y[i]));
-        }
-
-        sum += sqrt((x[0] - x[n - 1]) * (x[0] - x[n - 1]) + (y[0] - y[n - 1]) * (y[0] - y[n - 1]));
-
-        printf("%.2lf\n", sum);
-    }
-
+    move(n);
     return 0;
 }
