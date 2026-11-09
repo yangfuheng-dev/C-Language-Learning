@@ -40,6 +40,12 @@
 *   📄 [`sorting_comparison.c`](./06_Sorting_Algorithms/sorting_comparison.c)
     *   **题目**：实现主元选择、冒泡、插入三种排序算法，并统计比较与交换/移动次数。
     *   **核心验证**：利用指针传址调用实现多值返回（计数器累加）；完美适配了特殊规则下的计次逻辑，直观对比了不同排序算法的执行效率。
+*   [`remove_duplicates.c`](./06_Sorting_Algorithms/remove_duplicates.c)
+    *   **内容**：删除数组中的重复元素（不使用辅助数组）。
+    *   **亮点**：利用双指针（i 和 k）原地覆盖法，既省空间又保留了元素的原始出现顺序。
+*   📄 [`move_zeroes.c`](./06_Sorting_Algorithms/move_zeroes.c)
+    *   **内容**：将所有 0 移动到数组末尾，且非 0 元素保持原相对顺序。
+    *   **亮点**：完美的原地双指针覆盖法，一次遍历，空间复杂度 O(1)。
 
 ## 💡 学习心得
 
