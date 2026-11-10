@@ -25,6 +25,9 @@
 *   📄 [`combination_calculator.c`](./03_Modular_Programming/combination_calculator.c)
     *   **题目**：根据输入的 m 和 n，计算分段函数（组合数）。
     *   **核心验证**：实践了函数封装（模块化设计）；通过“先乘分子，再依次除分母”的策略，规避了阶乘计算时可能发生的整数溢出风险。
+*   📄 [`goldbach_conjecture.c`](./06_Sorting_Algorithms/goldbach_conjecture.c)
+    *   **内容**：验证哥德巴赫猜想，输出任意大于2的偶数的所有素数拆分组合。
+    *   **亮点**：封装了专用的素数判断函数；利用 `i <= j` 保证了小素数在前，完美去重；对素数判断循环做了 `i * i` 开方级优化。
       
 ### 4. 循环与图形打印 - 字母金字塔
 *   📄 [`alphabet_pyramid.c`](./04_Loops_and_Patterns/alphabet_pyramid.c)
@@ -40,7 +43,7 @@
 *   📄 [`sorting_comparison.c`](./06_Sorting_Algorithms/sorting_comparison.c)
     *   **题目**：实现主元选择、冒泡、插入三种排序算法，并统计比较与交换/移动次数。
     *   **核心验证**：利用指针传址调用实现多值返回（计数器累加）；完美适配了特殊规则下的计次逻辑，直观对比了不同排序算法的执行效率。
-*   [`remove_duplicates.c`](./06_Sorting_Algorithms/remove_duplicates.c)
+*   📄[`remove_duplicates.c`](./06_Sorting_Algorithms/remove_duplicates.c)
     *   **内容**：删除数组中的重复元素（不使用辅助数组）。
     *   **亮点**：利用双指针（i 和 k）原地覆盖法，既省空间又保留了元素的原始出现顺序。
 *   📄 [`move_zeroes.c`](./06_Sorting_Algorithms/move_zeroes.c)
