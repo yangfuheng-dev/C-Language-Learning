@@ -49,7 +49,7 @@
 *    📄 [`move_zeroes.c`](./06_Sorting_Algorithms/move_zeroes.c)
     *   **内容**：将所有 0 移动到数组末尾，且非 0 元素保持原相对顺序。
     *   **亮点**：完美的原地双指针覆盖法，一次遍历，空间复杂度 O(1)。
-*   * 📄 [`spiral_matrix.c`](./06_Sorting_Algorithms/spiral_matrix.c)
+*    📄 [`spiral_matrix.c`](./06_Sorting_Algorithms/spiral_matrix.c)
     *   **内容**：生成并打印 N*N 的螺旋矩阵。
     *   **亮点**：利用四个边界变量（top, bottom, left, right）进行模拟填充，精准控制循环边界；使用 `%4d` 实现完美的矩阵对齐排版。
 
