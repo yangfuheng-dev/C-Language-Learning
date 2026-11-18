@@ -30,26 +30,26 @@
     *   **亮点**：封装了专用的素数判断函数；利用 `i <= j` 保证了小素数在前，完美去重；对素数判断循环做了 `i * i` 开方级优化。
       
 ### 4. 循环与图形打印 - 字母金字塔
-    📄 [`alphabet_pyramid.c`](./04_Loops_and_Patterns/alphabet_pyramid.c)
+*   📄 [`alphabet_pyramid.c`](./04_Loops_and_Patterns/alphabet_pyramid.c)
     *   **题目**：打印带缩进的字母金字塔。
     *   **核心验证**：通过三层嵌套循环，精准控制前导空格（`num - i`）与字符的升降序，巩固了对循环边界和变量作用域的控制。
 ---
 ### 5. 数据结构入门 - 括号匹配
-   📄 [`bracket_matching.c`](./05_Data_Structures/bracket_matching.c)
+*   📄 [`bracket_matching.c`](./05_Data_Structures/bracket_matching.c)
     *   **题目**：检查字符串中的括号是否匹配。
     *   **核心验证**：利用数组模拟“栈”的后进先出特性，精准处理嵌套、多余字符过滤以及右括号早于左括号出现的异常情况。
 
 ### 6. 排序算法性能对比
-    📄 [`sorting_comparison.c`](./06_Sorting_Algorithms/sorting_comparison.c)
+*    📄 [`sorting_comparison.c`](./06_Sorting_Algorithms/sorting_comparison.c)
     *   **题目**：实现主元选择、冒泡、插入三种排序算法，并统计比较与交换/移动次数。
     *   **核心验证**：利用指针传址调用实现多值返回（计数器累加）；完美适配了特殊规则下的计次逻辑，直观对比了不同排序算法的执行效率。
-    📄[`remove_duplicates.c`](./06_Sorting_Algorithms/remove_duplicates.c)
+*    📄[`remove_duplicates.c`](./06_Sorting_Algorithms/remove_duplicates.c)
     *   **内容**：删除数组中的重复元素（不使用辅助数组）。
     *   **亮点**：利用双指针（i 和 k）原地覆盖法，既省空间又保留了元素的原始出现顺序。
-    📄 [`move_zeroes.c`](./06_Sorting_Algorithms/move_zeroes.c)
+*    📄 [`move_zeroes.c`](./06_Sorting_Algorithms/move_zeroes.c)
     *   **内容**：将所有 0 移动到数组末尾，且非 0 元素保持原相对顺序。
     *   **亮点**：完美的原地双指针覆盖法，一次遍历，空间复杂度 O(1)。
-    *   📄 [`spiral_matrix.c`](./06_Sorting_Algorithms/spiral_matrix.c)
+*    *   📄 [`spiral_matrix.c`](./06_Sorting_Algorithms/spiral_matrix.c)
     *   **内容**：生成并打印 N*N 的螺旋矩阵。
     *   **亮点**：利用四个边界变量（top, bottom, left, right）进行模拟填充，精准控制循环边界；使用 `%4d` 实现完美的矩阵对齐排版。
 
