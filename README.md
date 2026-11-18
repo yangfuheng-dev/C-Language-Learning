@@ -52,6 +52,9 @@
 *    📄 [`spiral_matrix.c`](./06_Sorting_Algorithms/spiral_matrix.c)
     *   **内容**：生成并打印 N*N 的螺旋矩阵。
     *   **亮点**：利用四个边界变量（top, bottom, left, right）进行模拟填充，精准控制循环边界；使用 `%4d` 实现完美的矩阵对齐排版。
+*    📄 [`remove_duplicates.c`](./06_Sorting_Algorithms/remove_duplicates.c)
+    *   **内容**：删除数组中的重复元素（不使用辅助数组）。
+    *   **亮点**：利用双指针（i 和 k）原地覆盖法，将时间复杂度优化至 O(n)，空间复杂度 O(1)，且完美保留元素原始顺序。
 
 ## 💡 学习心得
 
