@@ -1,0 +1,30 @@
+#include<stdio.h>
+int main() {
+	int n, s, m;
+	int alive[1000] = { 0 };
+	scanf("%d%d%d", &n, &s, &m);
+	for (int i = 0;i < n;i++)
+		alive[i] = 1;
+	int live = n;
+	int i = s - 1;
+	int count = 0;
+	while (live > 1) {
+		if (alive[i]) {
+			count++;                     //【补充点1】；先判断再加，避免大于m
+			if (count == m) {
+				alive[i] = 0;
+				printf("%d ", i + 1);      //【补充点2】；i+1实际对应数组中i
+				count = 0;
+				live--;
+			}
+		}
+		i++;
+		if (i==n)
+		i = 0;
+	}
+	for (int k = 0;k < n;k++) {
+		if (alive[k])
+			printf("%d",k+1);
+	}
+	return 0;
+}
