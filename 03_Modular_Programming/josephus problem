@@ -1,3 +1,8 @@
+/**
+ * @file josephus.c
+ * @brief 约瑟夫环：n 人围圈报数，每数到 m 者出局，输出出局顺序与幸存者编号
+ * @author yangfuhheng-dev
+ */
 #include<stdio.h>
 int main() {
 	int n, s, m;
