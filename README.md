@@ -33,10 +33,13 @@
     *   **核心验证**：用 alive 数组标记生死，仅对活着的人报数（count++），数到 m 立即输出编号、标记出局并将 count 归零；`i` 到末尾绕回开头（i==n 归零），精准控制循环边界，避免死循环与计数冲过头。
 
       
-### 4. 循环与图形打印 - 字母金字塔
+### 4. 循环与图形打印
 *   📄 [`alphabet_pyramid.c`](./04_Loops_and_Patterns/alphabet_pyramid.c)
     *   **题目**：打印带缩进的字母金字塔。
     *   **核心验证**：通过三层嵌套循环，精准控制前导空格（`num - i`）与字符的升降序，巩固了对循环边界和变量作用域的控制。
+*    📄 [`spiral_matrix.c`](./04_Loops_and_Patterns/spiral_matrix.c)
+    *   **内容**：生成并打印 N*N 的螺旋矩阵。
+    *   **亮点**：利用四个边界变量（top, bottom, left, right）进行模拟填充，精准控制循环边界；使用 `%4d` 实现完美的矩阵对齐排版。
 ---
 ### 5. 数据结构入门 - 括号匹配
 *   📄 [`bracket_matching.c`](./05_Data_Structures/bracket_matching.c)
@@ -53,9 +56,6 @@
 *    📄 [`move_zeroes.c`](./06_Sorting_Algorithms/move_zeroes.c)
     *   **内容**：将所有 0 移动到数组末尾，且非 0 元素保持原相对顺序。
     *   **亮点**：完美的原地双指针覆盖法，一次遍历，空间复杂度 O(1)。
-*    📄 [`spiral_matrix.c`](./06_Sorting_Algorithms/spiral_matrix.c)
-    *   **内容**：生成并打印 N*N 的螺旋矩阵。
-    *   **亮点**：利用四个边界变量（top, bottom, left, right）进行模拟填充，精准控制循环边界；使用 `%4d` 实现完美的矩阵对齐排版。
 *    📄 [`remove_duplicates.c`](./06_Sorting_Algorithms/remove_duplicates.c)
     *   **内容**：删除数组中的重复元素（不使用辅助数组）。
     *   **亮点**：利用双指针（i 和 k）原地覆盖法，将时间复杂度优化至 O(n)，空间复杂度 O(1)，且完美保留元素原始顺序。
