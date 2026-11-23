@@ -25,10 +25,10 @@
 *   📄 [`combination_calculator.c`](./03_Modular_Programming/combination_calculator.c)
     *   **题目**：根据输入的 m 和 n，计算分段函数（组合数）。
     *   **核心验证**：实践了函数封装（模块化设计）；通过“先乘分子，再依次除分母”的策略，规避了阶乘计算时可能发生的整数溢出风险。
-*   📄 [`goldbach_conjecture.c`](03_Modular_Programming/goldbach_conjecture.c)
+*   📄 [`goldbach_conjecture.c`](./03_Modular_Programming/goldbach_conjecture.c)
     *   **内容**：验证哥德巴赫猜想，输出任意大于2的偶数的所有素数拆分组合。
     *   **亮点**：封装了专用的素数判断函数；利用 `i <= j` 保证了小素数在前，完美去重；对素数判断循环做了 `i * i` 开方级优化。
-*   📄 [josephus.c](./03_Loops_and_Patterns/josephus.c)
+*   📄 [josephus.c](./03_Modular_Programming/josephus problem)
   - **题目**：约瑟夫环，n 人围圈从 s 号开始报数，每数到 m 者出局，依次输出出局顺序与幸存者编号。
   - **核心验证**：用 alive 数组标记生死，仅对活着的人报数（count++），数到 m 立即输出编号、标记出局并将 count 归零；`i` 到末尾绕回开头（i==n 归零），精准控制循环边界，避免死循环与计数冲过头。
 
