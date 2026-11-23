@@ -28,7 +28,7 @@
 *   📄 [`goldbach_conjecture.c`](./03_Sorting_Algorithms/goldbach_conjecture.c)
     *   **内容**：验证哥德巴赫猜想，输出任意大于2的偶数的所有素数拆分组合。
     *   **亮点**：封装了专用的素数判断函数；利用 `i <= j` 保证了小素数在前，完美去重；对素数判断循环做了 `i * i` 开方级优化。
-*   📄   - [josephus.c](./03_Loops_and_Patterns/josephus.c)
+*   📄 [josephus.c](./03_Loops_and_Patterns/josephus.c)
   - **题目**：约瑟夫环，n 人围圈从 s 号开始报数，每数到 m 者出局，依次输出出局顺序与幸存者编号。
   - **核心验证**：用 alive 数组标记生死，仅对活着的人报数（count++），数到 m 立即输出编号、标记出局并将 count 归零；`i` 到末尾绕回开头（i==n 归零），精准控制循环边界，避免死循环与计数冲过头。
 
