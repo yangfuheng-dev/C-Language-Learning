@@ -11,16 +11,20 @@
 ---
 
 ## 📂 目录导航***
+### 1.递归函数
+* 📄 [integer_partition.c](./01_Recursion_Algorithms/integer_partition.c)
+    *    **内容**：正整数分解——递归枚举 n 的所有不增正整数和式，按第一项递减逐行输出。
+    *    **亮点**：`dfs(remain, maxVal)` 中 i 从上限递减枚举，一个循环同时满足"不增"与"第一项递减"；递归返回时 `depth--` 回溯，干净地枚举出所有拆法。
 
-### 1. 传值调用 (Pass by Value)
+### 2. 传值与传址
 *   📄  [circle_area.c](./02_Functions_And_Pointers/circle_area.c)
     *   **题目**：计算圆的面积。***
     *   **核心验证**：在函数内部修改形参 `radius = 0`，验证主函数中的原变量**不会**被改变。形参只是实参的一份临时拷贝。
-
-### 2. 传址调用 (Pass by Reference) - 商品打折
+      
 *   📄 [apply_discount.c](./02_Functions_And_Pointers/apply_discount.c)
     *   **题目**：商品打折计算。
     *   **核心验证**：通过传入变量地址（指针 `*`），在函数内部直接修改原价格。验证了主函数中的原变量与功能函数中的变量**同时改变**。
+       
       ### 3. 模块化程序设计 - 组合数计算
 *   📄 [`combination_calculator.c`](./03_Modular_Programming/combination_calculator.c)
     *   **题目**：根据输入的 m 和 n，计算分段函数（组合数）。
@@ -34,8 +38,6 @@
 *   📄 [cut_bar.c](./03_Modular_Programming/cut_bar.c)
     *   **内容**：给定长度 n 的木条，在 2/5 处四舍五入截断，段长超过 k 就继续截，求最终得到的木条根数。
     *   **亮点**：递归出口返回根数 1 而非长度；用 (n*2+2)/5 实现四舍五入（加除数一半使余数凑够 5 进位）；长木条用 n-短木条 表示，两段各自递归、根数相加，逻辑简洁且不用辅助数组。
-
-
       
 ### 4. 循环与图形打印
 *   📄 [`alphabet_pyramid.c`](./04_Loops_and_Patterns/alphabet_pyramid.c)
