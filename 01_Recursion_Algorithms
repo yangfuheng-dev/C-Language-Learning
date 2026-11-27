@@ -1,1 +1,46 @@
-
+/**
+ * @file integer_split.c
+ * @brief 正整数分解：按第一项递减输出其所有不增正整数和式
+ * @author yangfuheng-dev
+ *
+ * @details
+ * 核心思想：递归枚举 + 上限递减。
+ * dfs(remain, maxVal) 表示把 remain 拆成若干份、每份不超过 maxVal；
+ * i 从 maxVal 递减枚举下一份，保证各份不增，同时满足第一项递减的输出顺序。
+ * 选中 i 后若 remain-i 为 0 则输出整组，否则递归 dfs(remain-i, i) 继续拆剩下的。
+ *
+ * @note 主函数传 dfs(n, n-1)，第一项最大为 n-1，不含 n 自身单项（样例无 n=n）；
+ *       print 只打印 path[0..depth-1] 已存项，第一项前不加 +；递归返回时 depth-- 回溯，
+ *       收回当前项，让循环能干净地试下一个 i。
+ */
+#include<stdio.h>
+#define total 20
+int n;
+int path[total];
+int depth = 0;
+void print() {
+	printf("%d=", n);
+	for (int i = 0;i < depth;i++) {
+		if (i > 0)
+			printf("+");
+		printf("%d", path[i]);
+	}
+	printf("\n");
+}
+void dfs(int num1, int num2) {
+	for (int i = num2;i >= 1;i--) {
+		if (i <= num1) {
+			path[depth++] = i;
+			if (num1 - i == 0)                //【补充点】；判断当前行有没有打印完
+				print();
+			else
+				dfs(num1 - i, i);
+			depth--;
+		}
+	}
+}
+int main() {
+	scanf("%d", &n);
+	dfs(n, n - 1);
+	return 0;
+}
